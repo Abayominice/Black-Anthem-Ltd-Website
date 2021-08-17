@@ -1,0 +1,14 @@
+{
+  "name": "balfyp",
+  "version": "1.0.0",
+  "description": "Final Year Project",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Abayomi",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
