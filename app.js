@@ -9,7 +9,7 @@ app.use(express.static(path.resolve(__dirname, 'public')))
 //Set views
 app.set('view engine', 'ejs')
 
-app.set('views', '.views')
+app.set('views', './views')
 
 app.get('/', (req, res) => {
   res.render('Home')
