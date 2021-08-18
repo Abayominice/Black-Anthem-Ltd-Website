@@ -1,22 +1,17 @@
 const express = require('express')
+const path = require('path')
 const app = express()
 const port = 3000
 
-app.get('/', (req, res) => {	
-  res.send('This is the new landing page')
-})
-
 //Static Files
-app.use(express.static('public'))
-app.use('/css', express.static(__dirname + 'public/css'))
-app.use('/js', express.static(__dirname + 'public/js'))
-app.use('/images', express.static(__dirname + 'public/images'))
+app.use(express.static(path.resolve(__dirname, 'public')))
 
 //Set views
-app.set('views', './views')
 app.set('view engine', 'ejs')
 
-app.get('', (req, res) => {
+app.set('views', 'views')
+
+app.get('/', (req, res) => {
   res.render('Home')
 })
 
