@@ -1,0 +1,7 @@
+#!/bin/sh
+
+#Checkout files
+GIT_WORK_TREE=/var/www/app/views/Home.ejs git checkout -f
+
+#Restart app
+pm2 reload app.js
