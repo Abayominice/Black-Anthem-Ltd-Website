@@ -1,15 +1,176 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    text-decoration: none;
+}
+html,body{
+    width:100%;
+    height:100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
 
-#menus{
-    display:flex;
-    flex-flow: row;
+header {
+    width: 100%;
+    padding: 1% 5% 1% 5%;
+    border-style: solid;
+    border-width: 10px;
+    border-color:forestgreen;
+    border-left: hidden;
+    border-top: hidden;
+    border-right: hidden;
+    background: #fff;
+    display: flex;
+    flex-direction: row nowrap;
     justify-content: space-between;
+    align-items: center;
+}
+#ballo, #menus {
+    display: flex;
+    flex-direction: row nowrap;
+    justify-content:flex-start;
+    align-items: center;
+}
+#ballo h2{
+    font-size: 2rem;
+    padding-left: 2%;
+    font-weight: bold;
 }
 
-@media screen and (max-width: 500px){
+#menus .menu{
+    padding-left: 5%;
+}
+.menul{
+    
+    padding-right: 5%;
+}
+#menus{
+    align-items: center;
+    margin-right: 8%;
     
 }
-@media screen and (max-width: 800px) {
-    
+#menus h3{
+    font-size: 1.5rem;
+    color: green;
+}
+#raq{
+    width: 650px;
+    height: 70px;
+    padding: 0% 0% 0% 0%;
+    margin-left: 5%;
+    border-style: solid;
+    border-width: 10px;
+    border-color:forestgreen;
+    border-radius: 40px;
+    border-top: hidden;
+    border-bottom: hidden;
+    background-color: forestgreen;
+}
+#raq h3{
+    color: white;
+}
+#balloresize{
+    width: 8%;
+    height: auto;
+    min-width: 8%;
+}
+#balloicresize{
+    max-width: 100%;
+    box-sizing: border-box;
+}
+.slideshow-container{
+    box-sizing: border-box;
+    max-width:1000px;
+    position: relative;
+    margin: auto;
+}
+/*hide the images by default*/
+.mySlides {
+    display: none;
+}
+/*next and previous buttons*/
+.prev, .next{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+/*positions the "next button" to the right*/
+.next{
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+/*on hover, add a black background color with a little bit see-through*/
+.prev:hover, .next:hover {
+    background-color: rgba( 0, 0, 0, 0.8);
+}
+/* caption text */
+.txt{
+    color: #fff;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+/*the dots*/
+.dot{
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+.active, .dot:hover{
+    background-color: #717171;
+}
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+.icir{
+    display: none;
+}
+@media only screen and (max-width: 700px){
+    .icir{
+        display: grid;
+    }
+}
+
+@media only screen and (max-width: 1200px) and (min-width: 700px) {
+    .icir{
+        display: none;
+    }
 }
 
 
