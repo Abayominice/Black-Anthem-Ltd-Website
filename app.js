@@ -31,10 +31,6 @@ app.get('/RAQ', (req, res) => {
   res.render('RAQ')
 })
 
-app.get('/Services', (req, res) => {
-  res.render('Services')
-})
-
 app.listen(port, () => {
 	  console.log(`Example app listening at http://localhost:${port}`)
 })
