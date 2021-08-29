@@ -127,15 +127,15 @@ header {
 }
 .awr img{
     width: 100%;
-    height: 50%;
+    height: 70%;
 }
 .word{
     background-color: forestgreen;
     position: absolute;
     color: white;
-    margin: 13.4% 40% 0% 7%;
+    margin: 16% 40% 0% 7%;
     padding: 0 4%;
-    height: 30%;
+    height: 46%;
 }
 .word h1{
     font-size: 2rem;
@@ -147,7 +147,7 @@ header {
     height: 10%;
     margin-top: 5%;
     margin-bottom: 0;
-    margin-left: 40%;
+    margin-left: 32%;
     padding-top: 0;
     padding-bottom: 0;
     max-width: 60%;
@@ -166,6 +166,7 @@ header {
     color:#fff;
     text-align: center;
     padding-right: 5%;
+    margin-top: 13.3%;
 }
 .socsect{
     border-style: solid;
@@ -277,20 +278,30 @@ header {
 }
 
 @media (max-width: 700px) {
+    .awr{
+        display: flex;
+        position: relative;
+        object-fit: contain;
+        margin-bottom: -33.46%;
+    }
+    .awr img{
+        width: 100%;
+        height: 150%;
+    }
     .word{
         background-color: forestgreen;
         position: absolute;
         color: white;
-        margin: 6.9% 40% 0% 7%;
+        margin: 40.3% 40% 0% 7%;
         padding: 0 4% 0 4%;
-        height: 40%;
+        height: 90%;
     }
     .word h1{
-        font-size: 1rem;
+        font-size: 2rem;
         text-align: center;
     }
     .word p{
-        font-size: 0.7rem;
+        font-size: 1rem;
         text-align: center;
     }
     .ftrmenu{
@@ -364,6 +375,7 @@ header {
         color:#fff;
         text-align: center;
         padding-right: 5%;
+        margin-top: 67%;
     }
     
     
@@ -456,20 +468,39 @@ header {
 }
 
 @media (min-width:700px) and (max-width: 1200px) {
+    #ftr1{
+        display: flex;
+        flex-direction: row;
+        background-color: #000;
+        color:#fff;
+        text-align: center;
+        padding-right: 5%;
+        margin-top: 46.8%;
+    }
+    .awr{
+        display: flex;
+        position: relative;
+        object-fit: contain;
+        margin-bottom: -33.46%;
+    }
+    .awr img{
+        width: 100%;
+        height: 120%;
+    }
     .word{
         background-color: forestgreen;
         position: absolute;
         color: white;
-        margin: 6.9% 40% 0% 7%;
+        margin: 33.7% 40% 0% 7%;
         padding: 0 4% 0 4%;
-        height: 40%;
+        height: 70%;
     }
     .word h1{
-        font-size: 1.5rem;
+        font-size: 1.6rem;
         text-align: center;
     }
     .word p{
-        font-size: 0.8rem;
+        font-size: 0.95rem;
         text-align: center;
     }
     

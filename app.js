@@ -31,8 +31,8 @@ app.get('/About', (req, res) => {
   res.render('About')
 })
 
-app.get('/Portfolio', (req, res) => {
-  res.render('Portfolio')
+app.get('/Projects', (req, res) => {
+  res.render('Projects')
 })
 
 app.get('/RAQ', (req, res) => {
