@@ -51,17 +51,11 @@
 
     <!-- start of body-->
     <main onclick="hideNav()"> 
-        <div class="himage">
-            <div id="topimg">
-                <img src="images/construction.png" alt="background image" >
-            </div>
-            <div id="wavimg">
-                <img src="images/wwv.png" alt="wave boder">
-            </div>
-        </div>
+        <section class="wave"><h1>Request A Quote</h1></section>
+        
         <div id="divsect">
             <div id="formsection">
-                <form action="">
+                <form action="" id="raqform">
                     <h2>Request A Quote</h2>
                     <div class="ol"><div class="nam" >Name</div><div id="rsik">*</div></div>
                     <div class="sd ssd"><input type="text" name="Name" placeholder="First" id="fn">
@@ -69,14 +63,84 @@
                     <div class="ol"><div class="nam" >E-mail</div><div id="rsik">*</div></div>
                     <div class="sd"><input type="email" name="email" placeholder="john@example.com" id="email"></div>
                     <div class="ol"><div class="nam" >Select A Service</div><div id="rsik">*</div></div>
-                    <div class="sd"><input type="text" name="Name" placeholder="First" id="fn">
-                    <input type="text" name="Name" placeholder="Last" id="ln" ></div>
-                </br>
+                    <div class="sd">
+                        <select name="services" id="ser" class="sd">
+                            <option value="RDCCC">Roads, Drainage, Culverts and channels construction</option>
+                            <option value="CON">Consultancy</option>
+                            <option value="DIC">Dams and irrigation Construction</option>
+                            <option value="WMPFC">Warehousing, Marine and port facilities construction</option>
+                            <option value="CHEIUPW">Construction of concrete hard surfaces especially in unfriendly polluted water</option>
+                            <option value="CBHF">Consultation on buildings and feasibility</option>
+                            <option value="CIMS">Calibration, inspection and meter proving services</option>
+                            <option value="DCOGPPF">Design and Construction of oil and gas production and processing facilities</option>
+                            <option value="DCPS">Design and Construction of pipeline Systems</option>
+                            <option value="DCRPP">Design and Construction of refineries and petrochemical plants</option>
+                            <option value="ROGF">Rehabilitation of oil and gas facilities (Onshore and Offshore)</option>
+                            <option value="DCMTF">Design, Construction and Maintenance of tank farms</option>
+                            <option value="DCMUS">Design, Construction and Maintenance of flow stations and underground storage</option>
+                            <option value="LIP">Local and international procurement</option>
+                            <option value="SSFP">Support services for projects</option>
+                            <option value="CMSL">Civil and mechanical equipment supply and leasing</option>
+                            <option value="HSEFPSMS">Health and safety environment and fire protection systems materials supply</option>
+                            <option value="EFPSMS">Environment and fire protection systems materials supply</option>
+                            <option value="SSS">Structural steel supply</option>
+                            <option value="POCTG">Pipeline and oil country tubular goods (OCTG) supply </option>
+                            <option value="WHCPS">Wellheads and control supply</option>
+                            <option value="VFS">Valves and fittings supply</option>
+                            <option value="PCFSS">Pumps, Compressor and fluid systems supply</option>
+                            <option value="SSMPS">Strategic sourcing and man power supplies</option>
+                            <option value="LSM">Logistics and supply chain management</option>
+                            <option value="PM">Project Management</option>
+                            <option value="FM">Facilities Management</option>
+                        </select>
+                        <div class="ol"><div class="nam" >Message</div><div id="rsik">*</div></div>
+                        <div class="sd"><textarea name="comment" id="" cols="30" rows="10">Type your message here</textarea></div>
+                    </div>
                     <button type="submit">Request A Quote</button>
                 </form>
             </div>
             <div id="socsection">
-
+                <div class="socicons">
+                    <div class="gs"><h3>Get Social</h3></div>
+                    <div class="smi">
+                        <div class="socrez2">
+                            <a href="https://www.facebook.com"><img src="images/facebook icon.png" class="soicrez2" alt=""></a>
+                        </div>
+                        <div class="socrez2 sp2">
+                            <a href="https://www.instagram.com"><img src="images/instagram-logo-png-transparent-background-1024x1024.png" class="soicrez2" alt=""></a>
+                        </div>
+                        <div class="socrez2 sp2">
+                            <a href="https://www.twitter.com"><img src="images/twitter.png" class="soicrez2" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+                <div id="tel2" class="row2">
+                    <div class="ph"><h3>Phone</h3></div>
+                    <div class="crow2">
+                        <div class="telimg2">
+                            <img src="images/telicn2.png" alt="telicn2" class="telicn2">
+                        </div>
+                        <span>+234803212378</span>
+                    </div>
+                </div>
+                <div id="mailicn2" class="row2">
+                    <div class="em"><h3>Email</h3></div>
+                    <div class="crow2">
+                        <div class="mailimg2">
+                            <img src="images/mailicn2.png" alt="mailicn" class="mailicn2">
+                        </div>
+                        <span>&nbsp;info@blackanthemltd.site</span>
+                    </div>
+                </div>
+                <div id="address" class="row2">
+                    <div class="ad"><h3>Address</h3></div>
+                    <div class="crow2">
+                        <div class="address">
+                            <img src="images/locicn.png" alt="mailicn" class="locicn2">
+                        </div>
+                        <span>155b, Silver Crescent, Jakande Estate, Isolo, Lagos State</span>
+                    </div>
+                </div>
             </div>
         </div>
     <!-- end -->
