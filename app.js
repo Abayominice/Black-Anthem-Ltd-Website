@@ -1,10 +1,19 @@
 const express = require('express')
 const path = require('path')
+// const cors = require('cors')
 const app = express()
-var mysql = require('mysql');
 const port = 3000
 
-
+// var corsOptions = {
+// 	origin: 'https://www.blackanthemltd.site',
+// 	optionsSuccessStatus: 200
+// }
+// app.get('/products/:id', cors(corsOptions), function (req, res, next) {
+// 	res.json({msg: 'This is CORS-enabled for only example.com.'})
+// })
+// // app.listen(3000, function () {
+// // console.log('CORS-enabled web server listening on port 80')
+// // })
 //Static Files
 app.use(express.static(path.resolve(__dirname, 'public')))
 
@@ -33,22 +42,3 @@ app.get('/RAQ', (req, res) => {
 app.listen(port, () => {
 	  console.log(`Example app listening at http://localhost:${port}`)
 })
-
-var connection = mysql.createConnection({
-  host     : 'https://www.blackanthemltd.site',
-  user     : 'abayomi',
-  password : '',
-  database : 'subscribers'
-});
- 
-connection.connect(function(err){
-  if (err) throw err;
-  console.log('connected..')
-});
- 
-connection.query('SELECT 1 + 1 AS solution', function (error, results, fields) {
-  if (error) throw error;
-  console.log('The solution is: ', results[0].solution);
-});
- 
-connection.end();
