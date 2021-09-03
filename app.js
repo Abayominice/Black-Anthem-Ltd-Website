@@ -2,9 +2,10 @@ const express = require('express')
 const path = require('path')
 const app = express()
 var mysql = require('mysql');
-
+var bodyParser = require('body-parser')
 const port = 3000
 
+var urlencodedParser = bodyParser.urlencoded({ extended: false })
 
 //Static Files
 app.use(express.static(path.resolve(__dirname, 'public')))
@@ -32,15 +33,19 @@ app.get('/RAQ', (req, res) => {
 })
 
 app.get('/', (req, res) => {
-  res.render('Home', {qs: req.query});
+  res.render('home', {qs: req.query});
 })
 
-
-
-app.get('/RAQ', (req, res) => {
-  res.render('RAQ', {qs: req.query});
+app.post('/', urlencodedParser, (req, res) => {
+  res.render('home', {qs: req.query});
 })
 
+app.get('/raq', (req, res) => {
+  res.render('raq', {qs: req.query});
+})
+app.post('/raq', urlencodedParser, (req, res) => {
+  res.render('raq', {qs: req.query});
+})
 var connection = mysql.createConnection({
   host     : 'https://www.blackanthemltd.site',
   user     : 'abayomi',
