@@ -33,18 +33,18 @@ app.get('/RAQ', (req, res) => {
 })
 
 app.get('/', (req, res) => {
-  res.render('home', {qs: req.query});
+  res.render('/', {qs: req.query});
 })
 
 app.post('/', urlencodedParser, (req, res) => {
-  res.render('home', {qs: req.query});
+  res.render('/', {qs: req.query});
 })
 
 app.get('/raq', (req, res) => {
-  res.render('raq', {qs: req.query});
+  res.render('/raq', {qs: req.query});
 })
 app.post('/raq', urlencodedParser, (req, res) => {
-  res.render('raq', {qs: req.query});
+  res.render('/raq', {qs: req.query});
 })
 var connection = mysql.createConnection({
   host     : 'https://www.blackanthemltd.site',
@@ -67,7 +67,7 @@ app.post('/', function(req,res){
     console.log('The solution is: ', results[0].solution);
   });
 
-  res.render('Home', { title: 'Data Saved',
+  res.render('/', { title: 'Data Saved',
   message: 'Data Saved successfully.'})
 
   connection.end();
@@ -85,7 +85,7 @@ connection2.connect(function(err){
   console.log('connected..')
 });
 
-app.post('/RAQ', function(req,res){
+app.post('/raq', function(req,res){
   console.log(req.body);
 
   var sql ="insert into users values('"+req.body.sfname+"', '"+req.body.slname+"', '"+req.body.semail+"', '"+req.body.services+"', "+req.body.comment+")"
@@ -94,7 +94,7 @@ app.post('/RAQ', function(req,res){
     console.log('The solution is: ', results[0].solution);
   });
 
-  res.render('RAQ', { title: 'Data Saved',
+  res.render('/raq', { title: 'Data Saved',
   message: 'Data Saved successfully.'})
 
   connection2.end();
