@@ -11,7 +11,8 @@ app.use(express.static(path.resolve(__dirname, 'public')))
 
 
 var usersRouter = require('./public/js/users');
-app.use('/api/', usersRouter);
+console.log("i got here ")
+app.use('/api', usersRouter);
 
 
 //Set views
