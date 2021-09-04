@@ -1,6 +1,8 @@
 const express = require('express')
 const path = require('path')
 
+console.log("@about")
+
 const app = express()
 const port = 3000
 
@@ -11,8 +13,7 @@ app.use(express.static(path.resolve(__dirname, 'public')))
 
 
 var usersRouter = require('./public/js/users');
-console.log("i got here ")
-app.use('/api', usersRouter);
+app.use('/api/', usersRouter);
 
 
 //Set views
@@ -21,10 +22,12 @@ app.set('view engine', 'ejs')
 app.set('views', './views')
 
 app.get('/', (req, res) => {
+  console.log("@home")
   res.render('Home')
 })
 
 app.get('/About', (req, res) => {
+  console.log("@about")
   res.render('About')
 })
 
