@@ -97,11 +97,11 @@ app.get('/RAQ', (req, res) => {
   res.render('RAQ')
 })
 
-app.get('/form', (req, res) => {
+app.get('/', (req, res) => {
   res.render('home', {qs: req.query});
 })
 
-app.post('/form', urlencodedParser, (req, res) => {
+app.post('/', urlencodedParser, (req, res) => {
   res.render('home', {qs: req.query});
 })
 
@@ -123,7 +123,7 @@ connection.connect(function(err){
   console.log('connected..')
 });
 
-app.post('/form', function(req,res){
+app.post('/', function(req,res){
   console.log(req.body);
 
   var sql ="insert into users values('"+req.body.fn+"','"+req.body.ln+"',"+req.body.email+")"
