@@ -100,7 +100,7 @@ app.get('/', (req, res) => {
 })
 
 app.post('/', urlencodedParser, (req, res) => {
-  res.render('home', {qs: req.query});
+  console.log(req.query);
 })
 
 // app.get('/raq', (req, res) => {
