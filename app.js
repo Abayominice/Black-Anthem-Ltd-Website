@@ -10,9 +10,8 @@ const port = 3000
 app.use(express.static(path.resolve(__dirname, 'public')))
 
 
-
-var usersRouter = require('./js/users');
-app.use('/', usersRouter);
+var usersRouter = require('./public/js/users');
+app.use('/api/', usersRouter);
 
 
 //Set views
