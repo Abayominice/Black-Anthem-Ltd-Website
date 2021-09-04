@@ -81,9 +81,7 @@ app.set('view engine', 'ejs')
 
 app.set('views', './views')
 
-app.get('/', (req, res) => {
-  res.render('Home')
-})
+
 
 app.get('/About', (req, res) => {
   res.render('About')
