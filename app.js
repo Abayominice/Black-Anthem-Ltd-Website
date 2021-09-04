@@ -11,7 +11,8 @@ app.use(express.static(path.resolve(__dirname, 'public')))
 
 
 var usersRouter = require('./js/users');
-app.use('/Home', usersRouter);
+app.use('/', usersRouter);
+
 
 //Set views
 app.set('view engine', 'ejs')
