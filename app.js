@@ -13,8 +13,29 @@ app.use(express.static(path.resolve(__dirname, 'public')))
 
 
 var usersRouter = require('./public/js/users');
-app.use('/api/', usersRouter);
+app.use('/api', usersRouter);
 
+
+app.get('/form', function(req, res, next) { 
+  res.render('Home'); 
+  console.log(req);
+  })
+
+  var db=require('../../database');
+
+router.post('/create', function(req, res, next) {
+  console.log(req)
+  // store all the user input data
+  const userDetails=req.body;
+ 
+  // insert user data into users table
+  var sql = 'INSERT INTO users SET ?';
+  db.query(sql, userDetails,function (err, data) { 
+      if (err) throw err;
+         console.log("User dat is inserted successfully "); 
+  });
+ res.redirect('/Home');  // redirect to user form page after inserting the data
+});
 
 //Set views
 app.set('view engine', 'ejs')
