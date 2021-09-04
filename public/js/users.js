@@ -1,11 +1,11 @@
 var express = require('express');
-var router = express.Router();
-var db=require('../database');
+var router = express.Route();
+var db=require('../../database');
+
 router.get('/form', function(req, res, next) { 
 res.render('Home'); 
 console.log(req);
-});
-router.post('/create', function(req, res, next) {
+}).post('/create', function(req, res, next) {
   console.log(req)
   // store all the user input data
   const userDetails=req.body;
