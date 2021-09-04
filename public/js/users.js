@@ -15,6 +15,6 @@ router.post('/create', function(req, res, next) {
       if (err) throw err;
          console.log("User dat is inserted successfully "); 
   });
- res.redirect('/users/form');  // redirect to user form page after inserting the data
+ res.redirect('/Home');  // redirect to user form page after inserting the data
 }); 
 module.exports = router;
