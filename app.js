@@ -30,7 +30,7 @@ connection.connect(function(err){
 //Set views
 app.set('view engine', 'ejs')
 
-app.set('views', './views')
+app.set('views', 'views')
 
 
 app.get('/About', (req, res) => {
@@ -46,7 +46,7 @@ app.get('/RAQ', (req, res) => {
 })
 
 app.get('/', (req, res) => {
-  res.render('home');
+  res.render('Home');
 })
 
 app.post('/', function(req, res) {
