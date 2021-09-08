@@ -64,7 +64,7 @@ app.post('/', function(req, res) {
   
 })
 app.post('/RAQ', function(req, res) {
-  var sql =`insert into raq values('${req.body.sfname}', '${req.body.slname}', '${req.body.semail}', '${req.body.services}', '${req.body.comments}')`;
+  var sql =`insert into raq values('${req.body.sfname}', '${req.body.slname}', '${req.body.semail}', '${req.body.services}', '${req.body.comment}')`;
   connection.query(sql, function (error, results) {
     if (error) throw error;
     app.get('/503page', (req, res) => {
