@@ -58,12 +58,25 @@ app.post('/', function(req, res) {
     })
   });
 
-  res.render('Home', { title: 'Data Saved',
+  res.render('Home2', { title: 'Data Saved',
   message: 'Data Saved successfully.'})
 
-  connection.end();
+  
 })
+app.post('/RAQ', function(req, res) {
+  var sql =`insert into raq values('${req.body.sfname}', '${req.body.slname}', '${req.body.semail}', '${req.body.services}', '${req.body.comments}')`;
+  connection.query(sql, function (error, results) {
+    if (error) throw error;
+    app.get('/503page', (req, res) => {
+      res.render('503page');
+    })
+  });
 
+  res.render('raq2', { title: 'Data Saved',
+  message: 'Data Saved successfully.'})
+
+  
+})
 app.listen(port, () => {
       console.log(`Example app listening at http://localhost:${port}`)
 })
