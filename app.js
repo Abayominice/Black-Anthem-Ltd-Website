@@ -1,6 +1,7 @@
 require('dotenv').config({});
 const express = require('express')
 const path = require('path')
+const nodemailer = require('nodemailer');
 const app = express()
 var mysql = require('mysql');
 var bodyParser = require('body-parser')
@@ -20,7 +21,7 @@ var connection = mysql.createConnection({
   password : process.env.DB_PASSWORD,
   database : process.env.DB_NAME,
 });
- 
+
 connection.connect(function(err){
   if (err) throw err;
   console.log('connected..')
@@ -51,6 +52,31 @@ app.get('/', (req, res) => {
 
 app.post('/', function(req, res) {
   var sql =`insert into bal values('${req.body.fname}', '${req.body.lname}', '${req.body.email}')`;
+  console.log(req.body);
+  const transporter = nodemailer.createTransport({
+    host: 'mail.privateemail.com',
+    port: 465,
+    secure:true,
+    auth: { 
+      user:'info@blackanthemltd.site',
+      pass:'mynameisabayomi.'
+    }
+  })
+  const mailOptions = {
+    from: 'info@blackanthemltd.site',
+    to: req.body.email,
+    subject: 'Subscriber',
+    text: 'Thank you for subscribing!'
+  }
+
+  transporter.sendMail(mailOptions, (error, info)=>{
+    if(error){
+      console.log(error);
+
+    }else{
+      console.log('Email sent')
+    }
+  })
   connection.query(sql, function (error, results) {
     if (error) throw error;
     app.get('/503page', (req, res) => {
@@ -58,22 +84,50 @@ app.post('/', function(req, res) {
     })
   });
 
-  res.render('Home2', { title: 'Data Saved',
-  message: 'Data Saved successfully.'})
+  res.redirect('/')
 
+  // res.render('Home2', { title: 'Data Saved',
+  // message: 'Data Saved successfully.'})
+ 
   
 })
 app.post('/RAQ', function(req, res) {
   var sql =`insert into raq values('${req.body.sfname}', '${req.body.slname}', '${req.body.semail}', '${req.body.services}', '${req.body.comment}')`;
+  const transporter = nodemailer.createTransport({
+    host: 'mail.privateemail.com',
+    port: 465,
+    // secure:true,
+    auth: { 
+      user:'info@blackanthemltd.site',
+      pass:'mynameisabayomi.'
+    }
+  })
+  const mailOptions = {
+    from: 'info@blackanthemltd.site',
+    to: 'info@blackanthemltd.site',
+    subject: `Message from ${req.body.semail}: for ${req.body.services}`,
+    text: req.body.comment
+  }
+
+  transporter.sendMail(mailOptions, (error, info)=>{
+    if(error){
+      console.log(error);
+
+    }else{
+      console.log('Email sent')
+    }
+  })
   connection.query(sql, function (error, results) {
     if (error) throw error;
     app.get('/503page', (req, res) => {
       res.render('503page');
     })
   });
+ 
+  res.redirect('/RAQ');
 
-  res.render('raq2', { title: 'Data Saved',
-  message: 'Data Saved successfully.'})
+  // res.render('raq2', { title: 'Data Saved',
+  // message: 'Data Saved successfully.'})
 
   
 })

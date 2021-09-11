@@ -192,6 +192,7 @@ section{
 .sd #fn{
     width: 48%;
     background-color: gainsboro;
+    color:gray;
     border: none;
     height: 29px;
 }
@@ -199,12 +200,14 @@ section{
 .sd #ln{
     width: 48%;
     background-color: gainsboro;
+    color:gray;
     border: none;
     height: 29px;
 }
 .sd #email{
     width: 100%;
     background-color: gainsboro;
+    color:gray;
     border: none;
     height: 29px;
 }
@@ -267,7 +270,7 @@ section{
     flex-direction: row;
 }
 .crow2 span{
-    padding-left: 2%;
+    padding-left: 2%; 
     font-weight: bold;
 }
 /*body styling ends here*/
@@ -276,7 +279,7 @@ section{
 #ftr1{
     display: flex;
     flex-direction: row;
-    background-color: #000;
+    background-color: #000; 
     color:#fff;
     text-align: center;
     padding-right: 5%;
@@ -390,18 +393,127 @@ section{
     display: none;
 }
 @media (max-width: 470px) {
-    .icir{
-            display: flex;
-            cursor: pointer;
-            padding-right: 350px;
-            margin-right: 220px;
-        }
-    #ballo h2{
-            font-size: 0.6rem;
-            padding-left: 2%;
-            font-weight: bold;
-        }
+    #divsect #socsection{
+        margin-right: 60%;
     }
+    #formsection .sd #email{
+        width: 40%;
+        background-color: gainsboro;
+        color:gray;
+        border: none;
+        height: 29px;
+    }
+    #formsection .sd textarea{
+        width: 40%;
+        background-color: gainsboro;
+        border: none;
+        height: 120px;
+        color:gray;
+    }
+    #formsection #ser{
+        width: 270px;
+        background-color: gainsboro;
+        color: gray;
+        border: none;
+        height: 29px;
+    }
+    main section{
+        padding-top: 4%;
+        
+        width: 50%;
+        min-height: 380px;
+    }
+    .ssd{
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+    }
+    #fn, #ln{
+        width: 204px;
+    }
+    .icir{
+        display: flex;
+        cursor: pointer;
+        padding-right: 100px;
+        margin-right: 340px;
+        max-width: 1px;
+        max-height: 35px;
+    }
+    
+    #ballo h2{
+        font-size: 0.6rem;
+        padding-left: 2%;
+        font-weight: bold;
+    }
+    #balloresize{
+        width: 14%;
+        height: auto;
+        min-width: 14%;
+    }
+    #balloicresize{
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+    #menus h3{
+        font-size: 0.8rem;
+        color: green;
+    }
+    #raq{
+        width: 10px;
+        height: 10px;
+        padding: 0% 2% 0% 0%;
+        margin-left: 3%;
+        margin-right: 12%;
+        border-style: solid;
+        border-width: 10px;
+        border-color:forestgreen;
+        border-radius: 40px;
+        border-top: hidden;
+        border-bottom: hidden;
+        background-color: forestgreen;
+    }
+    #raq h3{
+        color: white;
+        font-size: 0.8rem;
+    }
+    main #ftr1{
+        display: grid;
+        flex-direction: column;
+    
+        background-color: #000;
+        color:#fff;
+        text-align: center;
+        padding-right: 5%;
+        margin-top: 0%;
+    }
+    main #ftr1 .socrez{
+        width: 8%;
+        height: 8%;
+        border-style: solid;
+        border-color: #000;
+        border-radius: 100%;
+        
+    }
+    .git b{
+        padding-left: -50%;
+    }
+
+.ftr2{
+    display: flex;
+    flex-direction: column;
+    background-color: #000;
+    color: #fff;
+    justify-content: space-between;
+}
+.ftrmenu{
+    display: flex;
+    flex-direction: row;
+    color: white;
+    width: 50%;
+    justify-content: flex-end;
+    margin-left: 5%;
+}
+}
 @media (max-width: 700px) {
 
     /*body styling starts here*/

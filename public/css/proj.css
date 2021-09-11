@@ -291,18 +291,144 @@ header {
     display: none;
 }
 @media (max-width: 470px) {
-    .icir{
-            display: flex;
-            cursor: pointer;
-            padding-right: 350px;
-            margin-right: 220px;
-        }
-    #ballo h2{
-            font-size: 0.6rem;
-            padding-left: 2%;
-            font-weight: bold;
-        }
+    #head{
+        text-align: center;
+        background: linear-gradient(to right, rgba(2, 2, 1, 0.486),rgba(2, 2, 1, 0.486)), url('../images/large_Oil-Refinery.jpg') no-repeat center;
+        margin-top: 0;
+        margin-right: 45%; 
+        padding-top: 2%;
+        padding-bottom: 2%;
+        color:white;
+        font-size: 1rem;
     }
+    .pwr{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: auto;
+        column-gap: 1%;
+        row-gap: 2%;
+        padding-top: 2%;
+        padding-right: 50%;
+        padding-bottom: 2%;
+        margin: 0% 5% 5% 7%;
+        background-color: white;
+    }
+    .imgresize{
+        width: 100%;
+        height: 80%;
+    }
+    .mres{
+        max-width: 100%;
+        max-height: 100%;
+    }
+    .imggal{
+        padding: 3% 4% 48% 4%;
+        background-color: gainsboro;
+        color: forestgreen;
+    }
+    .imggal h4{
+        margin-top: -35%;
+        font-size: 0.9rem;
+    }
+    .bage{
+        background-color: forestgreen;
+        height: 10%;
+        margin-top: -1%;
+        margin-bottom: 0;
+        margin-left: 0%;
+        padding-top: 0;
+        padding-bottom: 0;
+        max-width: 60%;
+        border-style: solid;
+        border-width: 10px;
+        border-color: forestgreen;
+        border-radius: 10%;
+        font-size: 0.6rem;
+    }
+    
+    .icir{
+        display: flex;
+        cursor: pointer;
+        padding-right: 100px;
+        margin-right: 340px;
+        max-width: 1px;
+        max-height: 35px;
+    }
+    
+    #ballo h2{
+        font-size: 0.6rem;
+        padding-left: 2%;
+        font-weight: bold;
+    }
+    #balloresize{
+        width: 14%;
+        height: auto;
+        min-width: 14%;
+    }
+    #balloicresize{
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+    #menus h3{
+        font-size: 0.8rem;
+        color: green;
+    }
+    #raq{
+        width: 10px;
+        height: 10px;
+        padding: 0% 2% 0% 0%;
+        margin-left: 3%;
+        margin-right: 12%;
+        border-style: solid;
+        border-width: 10px;
+        border-color:forestgreen;
+        border-radius: 40px;
+        border-top: hidden;
+        border-bottom: hidden;
+        background-color: forestgreen;
+    }
+    
+    #raq h3{
+        color: white;
+        font-size: 0.8rem;
+    }
+main #ftr1{
+    display: grid;
+    flex-direction: column;
+
+    background-color: #000;
+    color:#fff;
+    text-align: center;
+    padding-right: 5%;
+    margin-top: 50%;
+}
+main #ftr1 .socrez{
+    width: 8%;
+    height: 8%;
+    border-style: solid;
+    border-color: #000;
+    border-radius: 100%;
+    
+}
+.git b{
+    padding-left: -50%;
+}
+.ftr2{
+    display: flex;
+    flex-direction: column;
+    background-color: #000;
+    color: #fff;
+    justify-content: space-between;
+}
+.ftrmenu{
+    display: flex;
+    flex-direction: row;
+    color: white;
+    width: 50%;
+    justify-content: flex-end;
+    margin-left: 5%;
+}
+}
 @media (max-width: 700px) {
     
     .pwr{
