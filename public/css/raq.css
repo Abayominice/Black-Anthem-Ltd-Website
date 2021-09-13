@@ -225,6 +225,7 @@ section{
     border-style: solid;
     border-color: gray;
     border-radius: 5%;
+    cursor: pointer;
 }
 #ser{
     width: 600px;

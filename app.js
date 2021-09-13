@@ -66,7 +66,7 @@ app.post('/', function(req, res) {
     from: 'info@blackanthemltd.site',
     to: req.body.email,
     subject: 'Subscriber',
-    text: 'Thank you for subscribing!'
+    text: `${req.body.fname}${req.body.lname} Thank you for subscribing to our newsletter!`
   }
 
   transporter.sendMail(mailOptions, (error, info)=>{
@@ -84,8 +84,8 @@ app.post('/', function(req, res) {
     })
   });
 
+
   res.redirect('/');
- 
   
 })
 app.post('/RAQ', function(req, res) {
@@ -122,10 +122,6 @@ app.post('/RAQ', function(req, res) {
   });
  
   res.redirect('/RAQ');
-
- 
-
-  
 })
 app.listen(port, () => {
       console.log(`Example app listening at http://localhost:${port}`)

@@ -535,6 +535,32 @@ header {
     display: none;
 }
 
+@media (max-width: 283px) {
+    header #menus .icir{
+        display: flex;
+        cursor: pointer;
+        padding-right: 800px;
+        margin-right: -270px;
+        /* margin-left: -2000px; */
+        max-width: 1px;
+        max-height: 35px;
+    }
+    header #ballo h2{
+        font-size: 0.5rem;
+        padding-left: 0.5%;
+        font-weight: bold;
+    }
+    header #balloresize{
+        width: 7%;
+        height: auto;
+        min-width: 7%;
+    }
+    header #balloicresize{
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+}
+
 @media (max-width: 470px) {
     .icir{
         display: flex;
