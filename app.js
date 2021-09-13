@@ -66,7 +66,7 @@ app.post('/', function(req, res) {
     from: 'info@blackanthemltd.site',
     to: req.body.email,
     subject: 'Subscriber',
-    text: 'Thank you for subscribing!'
+    text: `${req.body.fname}${req.body.lname} Thank you for subscribing to our newsletter!`
   }
 
   transporter.sendMail(mailOptions, (error, info)=>{
@@ -84,11 +84,9 @@ app.post('/', function(req, res) {
     })
   });
 
-  res.redirect('/')
+  res.redirect('/') 
 
-  // res.render('Home2', { title: 'Data Saved',
-  // message: 'Data Saved successfully.'})
- 
+  
   
 })
 app.post('/RAQ', function(req, res) {
@@ -126,9 +124,7 @@ app.post('/RAQ', function(req, res) {
  
   res.redirect('/RAQ');
 
-  // res.render('raq2', { title: 'Data Saved',
-  // message: 'Data Saved successfully.'})
-
+  
   
 })
 app.listen(port, () => {
