@@ -84,10 +84,7 @@ app.post('/', function(req, res) {
     })
   });
 
-  res.redirect('/')
-
-  // res.render('Home2', { title: 'Data Saved',
-  // message: 'Data Saved successfully.'})
+  res.redirect('/');
  
   
 })
@@ -126,8 +123,7 @@ app.post('/RAQ', function(req, res) {
  
   res.redirect('/RAQ');
 
-  // res.render('raq2', { title: 'Data Saved',
-  // message: 'Data Saved successfully.'})
+ 
 
   
 })
