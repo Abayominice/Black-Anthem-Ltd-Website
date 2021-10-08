@@ -406,6 +406,7 @@ header {
     padding: 2%;
 }
 #subform button{
+    cursor: pointer;
     padding: 2%;
     background-color: white;
     color: gray;
