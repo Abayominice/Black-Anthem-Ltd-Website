@@ -84,9 +84,8 @@ app.post('/', function(req, res) {
     })
   });
 
-  res.redirect('/') 
 
-  
+  res.redirect('/');
   
 })
 app.post('/RAQ', function(req, res) {
@@ -123,9 +122,6 @@ app.post('/RAQ', function(req, res) {
   });
  
   res.redirect('/RAQ');
-
-  
-  
 })
 app.listen(port, () => {
       console.log(`Example app listening at http://localhost:${port}`)
