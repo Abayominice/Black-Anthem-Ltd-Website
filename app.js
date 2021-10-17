@@ -128,7 +128,7 @@ const vonage = new Vonage({
   })
 const sfrom = `${req.body.semail}`
 const sto = "+2348121318795"
-const stext = `Black Anthem LTD! ${req.body.sfname} ${req.body.slname} requests for qoutation on the service:${req.body.services}. He says: ${req.body.comment}`
+const stext = `Black Anthem LTD! ${req.body.sfname} ${req.body.slname} with mobile number: ${req.body.semail}, requests for qoutation on the service: ${req.body.services} and says: ${req.body.comment}`
 
 vonage.message.sendSms(sfrom, sto, stext, (err, responseData) => {
     if (err) {
@@ -149,7 +149,7 @@ const vonage1 = new Vonage1({
 
 const ssfrom = "Black Anthem LTD"
 const ssto = `${req.body.semail}`
-const sstext = `Thank you for Subscribing to our Newsletter`
+const sstext = `Your request has been recieved, we will get back to you shortly!`
  
 vonage1.message.sendSms(ssfrom, ssto, sstext, (err, responseData) => {
     if (err) {
